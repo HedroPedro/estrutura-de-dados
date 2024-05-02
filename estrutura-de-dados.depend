@@ -1,11 +1,11 @@
 # depslib dependency file v1.0
-1714601122 source:c:\estudos\estrutura-de-dados\main.c
+1714666095 source:c:\estudos\estrutura-de-dados\main.c
 	"lista.h"
 
-1714600931 c:\estudos\estrutura-de-dados\lista.h
+1714665978 c:\estudos\estrutura-de-dados\lista.h
 	<stdio.h>
 	<stdlib.h>
 
-1714601134 source:c:\estudos\estrutura-de-dados\lista.c
+1714666062 source:c:\estudos\estrutura-de-dados\lista.c
 	"lista.h"
 

@@ -4,7 +4,10 @@ int main()
 {
     int x = 2;
     ListHeader *listaNova = createList();
-    addToList(listaNova, &x, INT);
+    listaNova = addToList(listaNova, (void*) &x, INT);
+    x = -12;
+    listaNova = addToList(listaNova, (void*) &x, INT);
     printf("%p\n", listaNova);
-    showIntegerData((void *) &x);
+    showDataInList(listaNova);
+    freeList(listaNova);
 }
