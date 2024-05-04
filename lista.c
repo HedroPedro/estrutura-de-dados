@@ -24,11 +24,11 @@ ListHeader *addToList(ListHeader *lista, void *data, uint type){
         novoElemento->showData = showCharData;
         break;
     default:
-        novoElemento->data = malloc(sizeof(int));
-        *(int *)novoElemento->data = ERROR_VALUE;
-        novoElemento->showData = showIntegerData;
+        free(novoElemento);
         SHOW_ERROR_MSG(TIPO INVALIDO);
+        return lista;
     }
+    novoElemento->type = type;
     return novoElemento;
 }
 
@@ -49,17 +49,128 @@ void showDataInList(ListHeader *lista){
         current->showData(current->data);
         current = current->next;
     }
-    printf("NULL");
+    printf("NULL\n");
 }
 
-void removeDataFromList(void *data, uint type){
+ListHeader *removeDataFromList(ListHeader* lista, void *data, uint type){
+    ListHeader *anterior = NULL, *atual = lista;
+    while(atual != NULL && !isGenericValueEqualToOther(atual->data, data, type)){
+        anterior = atual;
+        atual = atual->next;
+    }
 
+    if(atual == NULL){
+        return lista;
+    }
+
+    if(anterior == NULL){
+        lista = atual->next;
+    }else{
+        anterior->next = atual->next;
+    }
+
+    free(atual->data);
+    free(atual);
+    return lista;
+}
+
+ListHeader *addDataOrdered(ListHeader *lista, void *dataToBeAdd, uint type){
+    ListHeader *anterior = NULL, *atual = lista;
+
+    while(atual != NULL && isGenericValueLesserThanOther(atual, dataToBeAdd, type) != -1
+          && isGenericValueLesserThanOther(atual, dataToBeAdd, type)){
+        anterior = atual;
+        atual = atual->next;
+    }
+
+    ListHeader *nodeToAdd = (ListHeader *) malloc(sizeof(ListHeader));
+    switch(type){
+    case INT:
+        nodeToAdd->data = malloc(sizeof(int));
+        *(int*)nodeToAdd->data = *(int *)data;
+        nodeToAdd->showData = showIntegerData;
+        break;
+    case UINT:
+        nodeToAdd->data = malloc(sizeof(uint));
+        *(uint*)nodeToAdd->data = *(uint *)data;
+        nodeToAdd->showData = showUIntegerData;
+        break;
+    case CHAR:
+        nodeToAdd->data = malloc(sizeof(char));
+        *(char*)nodeToAdd->data = *(char *)data;
+        nodeToAdd->showData = showCharData;
+        break;
+    default:
+        free(nodeToAdd);
+        SHOW_ERROR_MSG(TIPO INVALIDO);
+        return lista;
+    }
+
+    novoElemento->type = type;
+
+    if(atual == NULL){
+        nodeToAdd->next = lista;
+        lista = nodeToAdd;
+        return lista;
+    }
+
+    nodeToAdd->next = anterior->next;
+    anterior->next = nodeToAdd;
+
+    return lista;
+}
+
+bool isGenericValueEqualToOther(ListHeader *lista, void* actualData, uint type){
+    if(lista->type != type){
+        return false;
+    }
+
+    switch(type){
+    case UINT:
+        return (*(uint*) lista->data) == (*(uint*) actualData);
+    case CHAR:
+        return (*(char*) lista->data) == (*(char*) actualData);
+    default:
+        return (*(int*) lista->data) == (*(int *) actualData);
+    }
+}
+
+bool isGenericValueLesserThanOther(ListHeader *lista, void *comparedData, uint type){
+    if(lista->type != type){
+        return ERROR_VALUE;
+    }
+
+    switch(type){
+    case UINT:
+        return (*(uint*) lista->data) < (*(uint*) comparedData);
+    case CHAR:
+        return (*(char*) lista->data) < (*(char*) comparedData);
+    default:
+        return (*(int*) lista->data) < (*(int *) comparedData);
+    }
+}
+
+bool isListEmpt(ListHeader *lista){
+    return lista == NULL;
+}
+
+bool areTwoListEquals(ListHeader *lista1, ListHeader *lista2){
+    ListHeader *p1, *p2;
+    for(p1 = lista1, p2 = lista2; p1 != NULL && p2 != NULL; p1 = p1->next, p2 = p2->next){
+        if(!isGenericValueEqualToOther(p1->data, p2->data, p1->type)){
+            return false;
+        }
+    }
+    return p1 == p2;
 }
 
 void freeList(ListHeader *lista){
-    for(ListHeader *current = lista; current != NULL; current = lista){
+    ListHeader *next;
+    ListHeader *current = lista;
+    while(current != NULL){
+        next = current->next;
         free(current->data);
-        lista = lista->next;
         free(current);
+        current = next;
     }
 }

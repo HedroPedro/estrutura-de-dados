@@ -11,7 +11,7 @@
 
 typedef unsigned int uint;
 typedef unsigned short bool;
-typedef void(*DisplayData)(void *);
+typedef void(*DisplayFunc)(void *);
 
 typedef enum {
     INT = 0, UINT, CHAR,
@@ -20,18 +20,22 @@ typedef enum {
 typedef struct ListHeader {
     void *data;
     Types type;
-    DisplayData showData;
+    DisplayFunc showData;
     struct ListHeader *next;
 } ListHeader;
 
 ListHeader *createList(void);
-void freeList(ListHeader *lista);
 ListHeader *addToList(ListHeader *lista, void *data, uint type);
-void removeDataFromList(void *data, uint type);
+ListHeader *removeDataFromList(ListHeader* lista, void *data, uint type);
+bool isGenericValueEqualToOther(ListHeader *lista, void *atualData, uint type);
+bool isGenericValueLesserThanOther(ListHeader *lista, void *comparedData, uint type);
+bool isListEmpt(ListHeader *lista);
+bool areTwoListEquals(ListHeader *lista1, ListHeader *lista2);
+void insertGenereicDataInList(ListHeader *nodeToAdd, void *data, uint type);
 void showDataInList(ListHeader *lista);
 void showIntegerData(void *data);
 void showUIntegerData(void *data);
 void showCharData(void *data);
-
+void freeList(ListHeader *lista);
 
 #endif
