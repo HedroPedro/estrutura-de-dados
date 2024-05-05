@@ -1,6 +1,6 @@
 # depslib dependency file v1.0
-1714829161 source:c:\estudos\estrutura-de-dados\main.c
-	"lista.h"
+1714940361 source:c:\estudos\estrutura-de-dados\main.c
+	"lista_com_header.h"
 
 1714828325 c:\estudos\estrutura-de-dados\lista.h
 	<stdio.h>
@@ -8,4 +8,18 @@
 
 1714687231 source:c:\estudos\estrutura-de-dados\lista.c
 	"lista.h"
+
+1714845266 c:\estudos\estrutura-de-dados\lista_sem_header.h
+	<stdio.h>
+	<stdlib.h>
+
+1714940363 source:c:\estudos\estrutura-de-dados\lista_com_header.c
+	"lista_com_header.h"
+
+1714939795 c:\estudos\estrutura-de-dados\lista_com_header.h
+	<stdio.h>
+	<stdlib.h>
+
+1714931975 source:c:\estudos\estrutura-de-dados\lista_sem_header.c
+	"lista_sem_header.h"
 
