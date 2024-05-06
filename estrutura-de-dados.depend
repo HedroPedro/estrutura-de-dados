@@ -23,3 +23,20 @@
 1714931975 source:c:\estudos\estrutura-de-dados\lista_sem_header.c
 	"lista_sem_header.h"
 
+1715009725 source:c:\users\pedro\onedrive\documentos\c\estruturadedados\lista_sem_header.c
+	"lista_sem_header.h"
+
+1715009725 c:\users\pedro\onedrive\documentos\c\estruturadedados\lista_sem_header.h
+	<stdio.h>
+	<stdlib.h>
+
+1715009725 source:c:\users\pedro\onedrive\documentos\c\estruturadedados\main.c
+	"lista_com_header.h"
+
+1715011777 c:\users\pedro\onedrive\documentos\c\estruturadedados\lista_com_header.h
+	<stdio.h>
+	<stdlib.h>
+
+1715010603 source:c:\users\pedro\onedrive\documentos\c\estruturadedados\lista_com_header.c
+	"lista_com_header.h"
+
