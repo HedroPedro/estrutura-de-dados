@@ -1,0 +1,16 @@
+#ifndef ASD_
+#define ASD_
+
+
+class asd
+{
+    public:
+        asd();
+        virtual ~asd();
+
+    protected:
+
+    private:
+};
+
+#endif // ASD_

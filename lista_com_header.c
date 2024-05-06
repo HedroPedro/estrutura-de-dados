@@ -75,16 +75,6 @@ ListCabe *removeDataFromListCabe(ListCabe *header, int infoToBeRemoved){
     return header;
 }
 
-ListCabe *freeListCade(ListCabe *header){
-    if(!header->firstNode){
-        fprintf(stderr, "CAEBCALHO NAO ESTA LIMPO");
-        return header;
-    }
-
-    free(header);
-    return NULL;
-}
-
 void printDataInList(ListCabe *header){
     Node *current;
 
@@ -99,7 +89,7 @@ void printDataInList(ListCabe *header){
     printf("NULL\n");
 }
 
-ListCabe *freeListCabeData(ListCabe *header){
+void *freeListCabeData(ListCabe *header){
     Node *current, *tmp;
     if(!header->firstNode){
         return header;
@@ -112,7 +102,6 @@ ListCabe *freeListCabeData(ListCabe *header){
         current = tmp;
     }
     header->firstNode = NULL;
-    header = freeListCade(header);
     return header;
 }
 bool isListEmpty(ListCabe *header){
