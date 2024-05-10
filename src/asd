@@ -1,0 +1,11 @@
+#include "asd."
+
+asd::asd()
+{
+    //ctor
+}
+
+asd::~asd()
+{
+    //dtor
+}

@@ -1,5 +1,6 @@
 #include "lista_com_header.h"
 
+#if !GENERIC
 ListCabe *createListHeader(void){
     ListCabe *header = (ListCabe *) malloc(sizeof(ListCabe));
     header->firstNode = NULL;
@@ -75,16 +76,6 @@ ListCabe *removeDataFromListCabe(ListCabe *header, int infoToBeRemoved){
     return header;
 }
 
-ListCabe *freeListCade(ListCabe *header){
-    if(!header->firstNode){
-        fprintf(stderr, "CAEBCALHO NAO ESTA LIMPO");
-        return header;
-    }
-
-    free(header);
-    return NULL;
-}
-
 void printDataInList(ListCabe *header){
     Node *current;
 
@@ -99,10 +90,10 @@ void printDataInList(ListCabe *header){
     printf("NULL\n");
 }
 
-ListCabe *freeListCabeData(ListCabe *header){
+void freeListCabeData(ListCabe *header){
     Node *current, *tmp;
     if(!header->firstNode){
-        return header;
+        return;
     }
 
     current = header->firstNode;
@@ -112,8 +103,6 @@ ListCabe *freeListCabeData(ListCabe *header){
         current = tmp;
     }
     header->firstNode = NULL;
-    header = freeListCade(header);
-    return header;
 }
 bool isListEmpty(ListCabe *header){
     return !header->firstNode;
@@ -132,3 +121,39 @@ bool isTwoListEquals(ListCabe *header1, ListCabe *header2){
 
     return p1 == p2;
 }
+
+#else
+    ListCabe *createListHeader(int size, int type, compareData comparatorFunc, printData printFunc, addNode addFunc){
+        ListCabe *header = malloc(size);
+        header->print = printFunc;
+        header->compareValues = comparatorFunc;
+        header->addNode = addFunc;
+        header->start = NULL;
+        return header;
+
+    void printInt(void *data){
+        printf("%i->", *(int *) data);
+    }
+
+    ListCabe *addIntNode(ListCabe *header, int info){
+    Node *current;
+    if(!header->firstNode){
+        header->firstNode = (Node *) malloc(sizeof(Node));
+        header->firstNode->info = info;
+        header->firstNode->next = NULL;
+        return header;
+    }
+
+    for(current = header->firstNode; current->next != NULL; current = current->next);
+    current->next = (Node *) malloc(sizeof(Node));
+    current->next->info = malloc(sizeof(int));
+    *(int *)current->next->info = info
+    current->next->next = NULL;
+    return header;
+}
+    }
+
+    bool compareIntegers(void *expectedData, void *actualData){
+        return true;
+    }
+#endif
