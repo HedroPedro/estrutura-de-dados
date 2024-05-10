@@ -1,6 +1,6 @@
 # depslib dependency file v1.0
-1714940361 source:c:\estudos\estrutura-de-dados\main.c
-	"lista_com_header.h"
+1715369780 source:c:\estudos\estrutura-de-dados\main.c
+	"fila_pilha.h"
 
 1714828325 c:\estudos\estrutura-de-dados\lista.h
 	<stdio.h>
@@ -13,7 +13,7 @@
 	<stdio.h>
 	<stdlib.h>
 
-1714940363 source:c:\estudos\estrutura-de-dados\lista_com_header.c
+1714940428 source:c:\estudos\estrutura-de-dados\lista_com_header.c
 	"lista_com_header.h"
 
 1714939795 c:\estudos\estrutura-de-dados\lista_com_header.h
@@ -22,4 +22,11 @@
 
 1714931975 source:c:\estudos\estrutura-de-dados\lista_sem_header.c
 	"lista_sem_header.h"
+
+1715369588 c:\estudos\estrutura-de-dados\fila_pilha.h
+	<stdio.h>
+	<stdlib.h>
+
+1715369715 source:c:\estudos\estrutura-de-dados\fila_pilha.c
+	"fila_pilha.h"
 
