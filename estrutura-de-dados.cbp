@@ -31,17 +31,15 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="estatico/estrutura-estatica.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="estatico/estrutura-estatica.h" />
 		<Unit filename="fila_pilha.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="fila_pilha.h" />
-		<Unit filename="lista_com_header.c">
-			<Option compilerVar="CC" />
-		</Unit>
 		<Unit filename="lista_com_header.h" />
-		<Unit filename="lista_sem_header.c">
-			<Option compilerVar="CC" />
-		</Unit>
 		<Unit filename="lista_sem_header.h" />
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
