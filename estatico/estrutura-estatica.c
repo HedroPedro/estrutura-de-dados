@@ -120,7 +120,10 @@ int remover_in_lista(Lista *lista, int pos){
 }
 
 int remover_final_in_lista(Lista *lista){
-    if(lista)
+    if(lista->last == 0){
+        PRINT_ERROR("LISTA VAZIA");
+        exit(1);
+    }
 }
 
 void push_last_in_lista(Lista *lista, int val){
