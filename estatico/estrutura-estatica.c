@@ -32,8 +32,8 @@ void push_in_pilha(Pilha *pilha, int val){
     pilha->topo++;
 }
 
-Fila *g(void){
-    Fila fila = (Fila *) malloc(sizeof(Fila));
+Fila *create_fila(void){
+    Fila *fila = (Fila *) malloc(sizeof(Fila));
     if(!fila){
         PRINT_ERROR("SEM ESPACO PARA CRIAR UMA FILA");
         exit(1);
@@ -51,7 +51,7 @@ int get_first_in_fila(Fila *fila){
     value = fila->vector[fila->start];
     fila->start++;
     if(fila->start == MAX_ELEMENTO){
-        f->start == 0;
+        fila->start == 0;
     }
     return value;
 }
@@ -111,7 +111,7 @@ int remover_in_lista(Lista *lista, int pos){
         exit(1);
     }
 
-    val = lista[pos];
+    val = lista->vector[pos];
     for(int i = pos; i < lista->last; i++){
         lista->vector[i] = lista->vector[i+1];
     }
@@ -124,6 +124,8 @@ int remover_final_in_lista(Lista *lista){
         PRINT_ERROR("LISTA VAZIA");
         exit(1);
     }
+    lista->last--;
+    return lista->vector[lista->last];
 }
 
 void push_last_in_lista(Lista *lista, int val){

@@ -10,7 +10,7 @@
 
 typedef struct Pilha{
     int vector[MAX_ELEMENTO];
-    int top;
+    int topo;
 } Pilha;
 
 typedef struct Fila {
@@ -36,7 +36,7 @@ void push_in_fila(Fila *fila, int val);
 Lista *create_lista(void);
 int get_value_in_pos(Lista *lista, int pos);
 int get_lista_size(Lista *lista);
-int remover_in_lista(Lista *lista, int val, int pos);
+int remover_in_lista(Lista *lista, int pos);
 int remover_final_in_lista(Lista *lista);
 void push_last_in_lista(Lista *lista, int val);
 void push_in_lista_pos(Lista *lista, int val, int pos);

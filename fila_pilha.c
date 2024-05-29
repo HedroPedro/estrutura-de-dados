@@ -265,6 +265,10 @@
 
     }
 
+    bool is_pilha_vazia(Stack *p1){
+        return p1->top == NULL;
+    }
+
     void showMenu1(Stack *p1){
         int opc = -1, num;
         while(1){
@@ -292,3 +296,53 @@
             }
         }
     }
+
+int is_fila_ordered(Queue *fila){
+    Elemento *cur = fila->first, *next;
+    if(cur == NULL){
+        return true;
+    }
+    next = cur->next;
+    while(next != NULL){
+        if(next->info > cur->info){
+            return false;
+        }
+        cur = next;
+        next = cur->next;
+    }
+
+    return true;
+}
+
+void remover_elemento_pilha(Stack *pilha, int elemento){
+    int *vect, tmp, qtd = 1;
+    if(is_pilha_vazia(pilha)){
+        return;
+    }
+
+    vect = (int *) malloc(sizeof(int));
+    vect[0] = popStack(pilha);
+    while(!is_pilha_vazia(pilha)){
+        tmp = popStack(pilha);
+        if(tmp == elemento){
+            continue;
+        }
+        qtd++;
+        vect = (int *) realloc(vect, sizeof(int) * qtd);
+        vect[qtd-1];
+    }
+
+    for(int i = qtd-1; i < -1; i--){
+        pushInStackValue(pilha, vect[i]);
+    }
+}
+
+float get_percentage(FilaEx4 *fila, float nota){
+    int qtd = 0, total = 0;
+    for(Aluno *cur = fila->start; cur != NULL; cur = cur->next){
+        if(nota > cur->nota)
+            qtd++;
+        total++;
+    }
+    return (qtd/total)*100;
+}

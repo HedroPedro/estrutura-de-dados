@@ -47,3 +47,36 @@
 	<stdio.h>
 	<stdlib.h>
 
+1716906979 source:c:\estudos\c\estrutura-de-dados\fila_pilha.c
+	"fila_pilha.h"
+
+1716907015 c:\estudos\c\estrutura-de-dados\fila_pilha.h
+	<stdio.h>
+	<stdlib.h>
+
+1716854069 source:c:\estudos\c\estrutura-de-dados\main.c
+	"fila_pilha.h"
+
+1716648745 c:\estudos\c\estrutura-de-dados\prova-simulado\prova_simulado1.h
+	<stdio.h>
+	<stdlib.h>
+
+1716648745 source:c:\estudos\c\estrutura-de-dados\prova-simulado\prova_simulado1.c
+	"prova_simulado1.h"
+
+1716906932 source:c:\estudos\c\estrutura-de-dados\estatico\estrutura-estatica.c
+	"estrutura-estatica.h"
+	<stdio.h>
+	<stdlib.h>
+
+1716741121 c:\estudos\c\estrutura-de-dados\estatico\estrutura-estatica.h
+	<stdio.h>
+	<stdlib.h>
+
+1716904691 source:c:\estudos\c\estrutura-de-dados\lista.c
+	"lista.h"
+
+1716907001 c:\estudos\c\estrutura-de-dados\lista.h
+	<stdio.h>
+	<stdlib.h>
+
