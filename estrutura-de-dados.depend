@@ -30,20 +30,25 @@
 1715369715 source:c:\estudos\estrutura-de-dados\fila_pilha.c
 	"fila_pilha.h"
 
-1716076377 source:c:\users\pedro\onedrive\documentos\c\estruturadedados\main.c
-	"estatico/estrutura-estatica.h"
+1718656334 source:c:\users\pedro\onedrive\documentos\c\estruturadedados\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	"algoritmos/buscas.h"
 
-1716642631 c:\users\pedro\onedrive\documentos\c\estruturadedados\fila_pilha.h
+1718652122 c:\users\pedro\onedrive\documentos\c\estruturadedados\fila_pilha.h
 	<stdio.h>
 	<stdlib.h>
 
-1716642635 source:c:\users\pedro\onedrive\documentos\c\estruturadedados\fila_pilha.c
+1718652122 source:c:\users\pedro\onedrive\documentos\c\estruturadedados\fila_pilha.c
 	"fila_pilha.h"
 
-1716643763 source:c:\users\pedro\onedrive\documentos\c\estruturadedados\estatico\estrutura-estatica.c
+1718652122 source:c:\users\pedro\onedrive\documentos\c\estruturadedados\estatico\estrutura-estatica.c
 	"estrutura-estatica.h"
+	<stdio.h>
+	<stdlib.h>
 
-1716643755 c:\users\pedro\onedrive\documentos\c\estruturadedados\estatico\estrutura-estatica.h
+1718652122 c:\users\pedro\onedrive\documentos\c\estruturadedados\estatico\estrutura-estatica.h
 	<stdio.h>
 	<stdlib.h>
 
@@ -84,4 +89,22 @@
 	"buscas.h"
 
 1718560429 c:\estudos\c\estrutura-de-dados\algoritmos\buscas.h
+
+1718656413 source:c:\users\pedro\onedrive\documentos\c\estruturadedados\algoritmos\buscas.c
+	"buscas.h"
+	<stdio.h>
+
+1718654387 c:\users\pedro\onedrive\documentos\c\estruturadedados\algoritmos\buscas.h
+
+1718652122 source:c:\users\pedro\onedrive\documentos\c\estruturadedados\lista.c
+	"lista.h"
+
+1718652122 c:\users\pedro\onedrive\documentos\c\estruturadedados\lista.h
+	<stdio.h>
+	<stdlib.h>
+
+1718653884 source:c:\users\pedro\onedrive\documentos\c\estruturadedados\algoritmos\ordenacao.c
+	"ordenacao.h"
+
+1718652122 c:\users\pedro\onedrive\documentos\c\estruturadedados\algoritmos\ordenacao.h
 

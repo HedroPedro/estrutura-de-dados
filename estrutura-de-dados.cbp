@@ -47,6 +47,8 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="fila_pilha.h" />
+		<Unit filename="iteracoesCasoMedio.txt" />
+		<Unit filename="iteracoesPiorCaso.txt" />
 		<Unit filename="lista.c">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -54,10 +56,6 @@
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="prova-simulado/prova_simulado1.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="prova-simulado/prova_simulado1.h" />
 		<Extensions />
 	</Project>
 </CodeBlocks_project_file>

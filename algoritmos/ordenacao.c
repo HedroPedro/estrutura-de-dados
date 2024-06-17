@@ -11,13 +11,13 @@ void selection_sort(int *vet, int tam){
 
     for(i = 0; i < tam-1; i++){
         min_index = i;
-        for(j = i+1; j < n; j++){
+        for(j = i+1; j < tam; j++){
             if(vet[j] < vet[min_index]){
                 min_index = j;
             }
 
             if(min_index != i){
-                swap(&vet[min_index], &vet[i])
+                swap(&vet[min_index], &vet[i]);
             }
         }
     }
@@ -25,7 +25,7 @@ void selection_sort(int *vet, int tam){
 
 void insertion_sort(int *vet, int tam){
     int i, chave, j;
-    for(i = i; i < n; i++){
+    for(i = i; i < tam; i++){
         chave = vet[i];
         j = i - 1;
 
