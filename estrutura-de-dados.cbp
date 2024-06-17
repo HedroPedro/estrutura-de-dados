@@ -31,6 +31,14 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="algoritmos/buscas.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="algoritmos/buscas.h" />
+		<Unit filename="algoritmos/ordenacao.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="algoritmos/ordenacao.h" />
 		<Unit filename="estatico/estrutura-estatica.c">
 			<Option compilerVar="CC" />
 		</Unit>

@@ -73,10 +73,15 @@
 	<stdio.h>
 	<stdlib.h>
 
-1716904691 source:c:\estudos\c\estrutura-de-dados\lista.c
+1716907037 source:c:\estudos\c\estrutura-de-dados\lista.c
 	"lista.h"
 
-1716907001 c:\estudos\c\estrutura-de-dados\lista.h
+1716907036 c:\estudos\c\estrutura-de-dados\lista.h
 	<stdio.h>
 	<stdlib.h>
+
+1718563693 source:c:\estudos\c\estrutura-de-dados\algoritmos\buscas.c
+	"buscas.h"
+
+1718560429 c:\estudos\c\estrutura-de-dados\algoritmos\buscas.h
 
